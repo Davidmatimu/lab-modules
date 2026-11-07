@@ -12,3 +12,8 @@ output "private_subnet_ids" {
   description = "IDs of the private subnets, one per zone"
   value       = [for s in aws_subnet.private : s.id]
 }
+
+output "vpc_cidr_block" {
+  description = "IP range of the VPC"
+  value       = aws_vpc.this.cidr_block
+}
