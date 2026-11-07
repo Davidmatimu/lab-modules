@@ -19,3 +19,9 @@ variable "az_count" {
     error_message = "az_count must be 2 or 3."
   }
 }
+
+variable "tags" {
+  description = "Extra tags added to every resource"
+  type        = map(string)
+  default     = {}
+}
